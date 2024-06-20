@@ -65,6 +65,9 @@ spec:
               - |
                 set -ex
                 echo "Preparing memoization params"
+                export HTTP_PROXY=http://172.27.82.88:8117
+                export HTTPS_PROXY=http://172.27.82.88:8117
+                export NO_PROXY=172.30.0.1,*argo-workflows*
                 git_uri=$(oc get bc {{inputs.parameters.build-config-name}} -o jsonpath='{.spec.source.git.uri}')
                 git_revision=$(oc get bc {{inputs.parameters.build-config-name}} -o jsonpath='{.spec.source.git.ref}')
                 echo "git_uri=\"$git_uri\"" >> /tmp/volume/memoization-params
@@ -81,6 +84,9 @@ spec:
               - |
                 set -exo pipefail
                 echo "Getting git revision sha"
+                export HTTP_PROXY=http://172.27.82.88:8117
+                export HTTPS_PROXY=http://172.27.82.88:8117
+                export NO_PROXY=172.30.0.1,*argo-workflows*
                 . /tmp/volume/memoization-params
                 if [ -z "${git_uri}" ] || [ -z "${git_revision}" ]; then
                   # TODO: this is for builds not using a git repo as source. For example, builds depending on previously

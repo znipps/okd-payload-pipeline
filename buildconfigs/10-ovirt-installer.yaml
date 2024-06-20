@@ -5,6 +5,7 @@ metadata:
   labels:
     resources-profile: high
     change-build-arg-tags: "true"
+    skip-installer-cli: "true"
 spec:
   source:
     type: Git

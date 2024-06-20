@@ -10,7 +10,7 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/okd-project/okd-payload-pipeline'
+      uri: 'https://github.com/znipps/okd-payload-pipeline'
       ref: main
     contextDir: forks
     images: []

@@ -10,7 +10,7 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/okd-project/images'
+      uri: 'https://github.com/znipps/images'
       ref: main
     contextDir: builder
     images: []

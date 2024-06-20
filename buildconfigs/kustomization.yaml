@@ -42,6 +42,7 @@ patches:
              - 'registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.20-openshift-4.15'
              - 'registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.21-openshift-4.14'
              - 'registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.21-openshift-4.15'
+             - 'registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.21-openshift-4.16'
              - 'registry.ci.openshift.org/openshift/release:golang-1.17'
              - 'registry.ci.openshift.org/openshift/release:golang-1.18'
              - 'registry.ci.openshift.org/openshift/release:golang-1.19'
@@ -50,6 +51,18 @@ patches:
     target:
       kind: BuildConfig
       labelSelector: "skip-replace-builder!=true"
+  - patch: |-
+      - op: add
+        path: "/spec/source/images/-"
+        value:
+          from:
+            kind: ImageStreamTag
+            name: 'release:installer-terraform-providers'
+          as:
+            - 'registry.ci.openshift.org/ocp/4.15:installer-terraform-providers'
+    target:
+      kind: BuildConfig
+      labelSelector: "skip-installer-cli=true"
   - patch: |-
       - op: add
         path: "/spec/source/images/-"
@@ -228,6 +241,7 @@ resources:
   - 10-insights-operator.yaml
   - 10-installer-artifacts.yaml
   - 10-installer.yaml
+  - 10-installer-terraform-providers.yaml
   - 10-ironic-agent.yaml
   - 10-ironic-hardware-inventory-recorder.yaml
   - 10-ironic-machine-os-downloader.yaml

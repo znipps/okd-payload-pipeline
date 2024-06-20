@@ -1,11 +1,10 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: installer-artifacts
+  name: installer-terraform-providers
   labels:
-    resources-profile: high
     change-build-arg-tags: "true"
-    skip-installer-cli: "true"
+    resources-profile: high
 spec:
   source:
     type: Git
@@ -18,7 +17,7 @@ spec:
     type: Docker
     dockerStrategy:
       imageOptimizationPolicy: SkipLayers
-      dockerfilePath: images/installer-artifacts/Dockerfile.rhel
+      dockerfilePath: images/infrastructure-providers/Dockerfile
       buildArgs:
           - name: "TAGS"
             value: "okd"
@@ -28,4 +27,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'release:installer-artifacts'
+      name: 'release:installer-terraform-providers'
