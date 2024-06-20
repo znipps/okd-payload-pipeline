@@ -9,7 +9,7 @@ FROM registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.20-openshift-4.15 AS 
 
 WORKDIR /go/src/github.com/openshift/ovn-kubernetes
 COPY . .
-RUN dnf install mingw64-gcc
+RUN dnf install -y --nodocs mingw64-gcc
 RUN cd go-controller; CGO_ENABLED=1 make
 RUN cd go-controller; CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc make windows
 
