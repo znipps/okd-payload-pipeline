@@ -27,4 +27,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'release:ovn-kubernetes-rhel-9'
+      name: 'release:ovn-kubernetes'

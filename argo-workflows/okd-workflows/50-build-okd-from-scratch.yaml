@@ -225,6 +225,7 @@ spec:
             {"buildConfig":"sdn","overrideRepoUrl":"","overrideBranch":""},
             {"buildConfig":"console","overrideRepoUrl":"","overrideBranch":""},
             {"buildConfig":"baremetal-installer","overrideRepoUrl":"","overrideBranch":""},
+            {"buildConfig":"installer-terraform-providers","overrideRepoUrl":"","overrideBranch":""},
             {"buildConfig":"installer-artifacts","overrideRepoUrl":"","overrideBranch":""},
             {"buildConfig":"installer","overrideRepoUrl":"","overrideBranch":""},
             {"buildConfig":"hyperkube","overrideRepoUrl":"","overrideBranch":""}
