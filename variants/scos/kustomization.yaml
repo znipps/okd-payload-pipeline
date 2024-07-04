@@ -29,7 +29,7 @@ patches:
           name: centos-stream-coreos-9
           from:
             kind: DockerImage
-            name: quay.io/okd/centos-stream-coreos-9:4.12-x86_64
+            name: quay.io/lxheryer/c9s:415.9.202406251159-0
           referencePolicy:
             type: Local
           importPolicy:
