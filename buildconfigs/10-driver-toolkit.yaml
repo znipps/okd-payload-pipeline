@@ -27,6 +27,12 @@ spec:
       buildArgs:
       - name: RHEL_VERSION
         value: "9.0"
+      - name: KERNEL_VERSION
+        value: "5.14.0-467.el9"
+      - name: RT_KERNEL_VERSION
+        value: "5.14.0-467.el9"
+      - name: RHEL_VERSION
+        value: "5.14.0-467.el9"
   output:
     to:
       kind: ImageStreamTag
