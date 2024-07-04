@@ -32,7 +32,7 @@ RUN yum -y install elfutils-libelf-devel kmod binutils kabi-dw && yum clean all
 
 # TODO[validate] replaced kernel-abi-whitelists with kernel-abi-stablelists: ref. https://bugzilla.redhat.com/show_bug.cgi?id=1953486
 RUN [ $(source /etc/os-release && echo $VERSION | cut -d'.' -f1) -gt 8 ] && \
-    yum -y install kernel-abi-stablelists || yum install -y install kernel-abi-whitelists ; \
+    yum -y install kernel-abi-stablelists${KERNEL_VERSION:+-}${KERNEL_VERSION} || yum install -y install kernel-abi-whitelists${KERNEL_VERSION:+-}${KERNEL_VERSION} ; \
     yum clean all
 
 # Find and install the GCC version used to compile the kernel
