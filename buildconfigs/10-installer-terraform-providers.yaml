@@ -27,4 +27,4 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'release:installer-terraform-providers'
+      name: 'tools:installer-terraform-providers'

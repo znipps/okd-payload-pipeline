@@ -57,7 +57,7 @@ patches:
         value:
           from:
             kind: ImageStreamTag
-            name: 'release:installer-terraform-providers'
+            name: 'tools:installer-terraform-providers'
           as:
             - 'registry.ci.openshift.org/ocp/4.15:installer-terraform-providers'
     target:
