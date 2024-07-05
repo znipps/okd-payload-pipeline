@@ -14,7 +14,7 @@ spec:
     type: Docker
     dockerStrategy:
       imageOptimizationPolicy: SkipLayers
-      dockerfilePath: Dockerfile.ocp
+      dockerfilePath: Dockerfile.rhel7
       from:
         kind: "ImageStreamTag"
         name: "release:base"
