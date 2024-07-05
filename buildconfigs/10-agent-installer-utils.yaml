@@ -1,0 +1,24 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: agent-installer-node-agent
+spec:
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/openshift/agent-installer-utils'
+      ref: release-4.15
+    contextDir: .
+    images: []
+  strategy:
+    type: Docker
+    dockerStrategy:
+      imageOptimizationPolicy: SkipLayers
+      dockerfilePath: images/Dockerfile.ocp
+      from:
+        kind: "ImageStreamTag"
+        name: "release:base"
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'release:agent-installer-utils'
