@@ -309,6 +309,18 @@ resources:
   - 10-vsphere-csi-driver-syncer.yaml
   - 10-vsphere-csi-driver.yaml
   - 10-vsphere-problem-detector.yaml
+  - 10-azure-workload-identity-webhook.yaml
+  - 10-cluster-config-api.yaml
+  - 10-cluster-olm-operator.yaml
+  - 10-cluster-platform-operators-manager.yaml
+  - 10-installer-altinfra.yaml
+  - 10-kubevirt-cloud-controller-manager.yaml
+  - 10-kubevirt-csi-driver.yaml
+  - 10-monitoring-plugin.yam
+  - 10-nutanix-cloud-controller-manager.yaml
+  - 10-olm-catalogd.yaml
+  - 10-olm-operator-controller.yaml
+  - 10-olm-rukpak.yaml
   - 20-agent-installer-api-server.yaml
   - 20-agent-installer-csr-approver.yaml
   - 20-artifacts.yaml
