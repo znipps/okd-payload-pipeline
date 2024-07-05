@@ -15,6 +15,9 @@ spec:
     dockerStrategy:
       imageOptimizationPolicy: SkipLayers
       dockerfilePath: Dockerfile.rhel8
+      buildArgs:
+        - name: "TAGS"
+          value: "scos"
       from:
         kind: "ImageStreamTag"
         name: "release:base"
