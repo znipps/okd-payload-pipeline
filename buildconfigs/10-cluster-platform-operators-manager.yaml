@@ -1,12 +1,12 @@
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
-  name: agent-installer-utils
+  name: cluster-platform-operators-manager
 spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/openshift/agent-installer-utils'
+      uri: 'https://github.com/openshift/platform-operators'
       ref: release-4.15
     contextDir: .
     images: []
@@ -14,11 +14,11 @@ spec:
     type: Docker
     dockerStrategy:
       imageOptimizationPolicy: SkipLayers
-      dockerfilePath: images/Dockerfile.ocp
+      dockerfilePath: Dockerfile
       from:
         kind: "ImageStreamTag"
         name: "release:base"
   output:
     to:
       kind: ImageStreamTag
-      name: 'release:agent-installer-utils'
+      name: 'release:cluster-platform-operators-manager'

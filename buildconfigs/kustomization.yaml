@@ -140,6 +140,7 @@ resources:
   - 06-cli.yaml
   - 10-agent-installer-node-agent.yaml
   - 10-agent-installer-orchestrator.yaml
+  - 10-agent-installer-utils.yaml
   - 10-alibaba-cloud-controller-manager.yaml
   - 10-alibaba-cloud-csi-driver.yaml
   - 10-alibaba-disk-csi-driver-operator.yaml
