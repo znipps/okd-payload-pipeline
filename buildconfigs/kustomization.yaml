@@ -316,7 +316,7 @@ resources:
   - 10-installer-altinfra.yaml
   - 10-kubevirt-cloud-controller-manager.yaml
   - 10-kubevirt-csi-driver.yaml
-  - 10-monitoring-plugin.yam
+  - 10-monitoring-plugin.yaml
   - 10-nutanix-cloud-controller-manager.yaml
   - 10-olm-catalogd.yaml
   - 10-olm-operator-controller.yaml
