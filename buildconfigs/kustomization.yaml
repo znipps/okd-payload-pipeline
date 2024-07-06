@@ -320,6 +320,8 @@ resources:
   - 10-olm-catalogd.yaml
   - 10-olm-operator-controller.yaml
   - 10-olm-rukpak.yaml
+  - 10-kube-metrics-server.yaml
+  - 10-openstack-cluster-api-controllers.yaml
   - 20-agent-installer-api-server.yaml
   - 20-agent-installer-csr-approver.yaml
   - 20-artifacts.yaml
