@@ -394,7 +394,7 @@ spec:
           value: |
             oc adm release new \
             --registry-config=$(workspaces.manifest-dir.path)/auth.json \
-            --from-image-stream release \
+            --from-image-stream release-4.15 \
             --insecure=true \
             --mirror $(params.result-mirror-location) \
             --to-image $(params.result-image) \

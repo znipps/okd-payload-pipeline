@@ -53,7 +53,7 @@ spec:
                 oc registry login -a /tmp/.dockerconfigjson
                 oc adm release new \
                   --registry-config=/tmp/.dockerconfigjson \
-                  --from-image-stream release \
+                  --from-image-stream release-4.15 \
                   --insecure=true \
                   --mirror {{inputs.parameters.release-mirror-location}} \
                   --to-image {{inputs.parameters.release-image-location}} \
